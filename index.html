@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间显示</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引用 dayjs 和 micromodal 库 -->
+    <!-- 引入 dayjs 和时区插件 -->
+    <script src="node_modules/dayjs/dayjs.min.js" defer></script>
+    <script src="node_modules/dayjs/plugin/utc.js" defer></script>
+    <script src="node_modules/dayjs/plugin/timezone.js" defer></script>
+    <script src="node_modules/micromodal/dist/micromodal.min.js" defer></script>
+
+</head>
+
+<body>
+    <div id="time-container">
+        <h1 id="current-time"></h1>
+        <button id="open-modal">更改时区</button>
+    </div>
+
+    <!-- 模态框结构 -->
+    <div class="modal micromodal-slide" id="timezone-modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-title">选择时区</h2>
+                    <button class="modal__close" aria-label="关闭模态框" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-content">
+                    <select id="timezone-select">
+                        <option value="UTC">UTC</option>
+                        <option value="America/New_York">纽约（EST）</option>
+                        <option value="Europe/London">伦敦（GMT）</option>
+                        <!-- 根据需要添加更多时区 -->
+                    </select>
+                </main>
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="关闭此对话框" id="save-timezone">保存</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引用你自己的脚本 -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>

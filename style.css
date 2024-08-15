@@ -1,0 +1,132 @@
+/* 基本页面样式 */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f0fe;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+#time-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#time-container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 25px;
+    color: #007bff;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+/* 模态框样式 */
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__container {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal__header {
+    margin-bottom: 20px;
+}
+
+.modal__title {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.modal__content {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal__btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal__btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.modal__btn-primary {
+    margin-left: 10px;
+}
+
+.modal__close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+    color: #333;
+}
